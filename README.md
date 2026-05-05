@@ -99,8 +99,8 @@ These tests ensure model consistency, alignment between PyTorch and ONNX predict
     ├── std.npy                # Feature normalization std
     ├── requirements.txt
     └── .env                   # Environment variables (not committed)
-    └── tests  
-```                            # Tests
+    └── tests                  # Tests
+```
 
 # ⚙️ Installation
 
