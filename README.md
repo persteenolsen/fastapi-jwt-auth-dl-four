@@ -140,7 +140,7 @@ Outputs:
 
 - Removed a hidden layer  
 - Reduced the hidden layer size (16 → 4 neurons)  
-- Lowered learning rate (0.01 → 0.005)  
+- Lowered learning rate (0.01 → 0.006)  
 - Increased training epochs (500 → 1000)  
 - Added weight decay (L2 regularization)  
 - Introduced early stopping for training stability  
