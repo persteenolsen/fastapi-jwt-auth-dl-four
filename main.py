@@ -9,6 +9,9 @@ import os
 from jose import jwt, JWTError
 from features import FEATURES
 
+# 06-05-2026 - For allowing a Vue frontend in another domain
+from fastapi.middleware.cors import CORSMiddleware
+
 # ----------------------------- INIT APP -----------------------------
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
@@ -26,6 +29,29 @@ app = FastAPI(
             "description": "JWT Token for API access",
         }
     ]
+)
+
+# 06-05-2026 - For allowing a Vue frontend in another domain
+# Set up CORS middleware
+origins = [
+
+    # Not sure if this is needed, but adding just in case
+    "https://fastapi-auth-dl-four.vercel.app",
+
+    # The domain name of the Vue 3 SPA Client
+    "https://vue.fastapi.jwt.auth.dl.four.persteenolsen.com",
+     
+    # Allow my local Vue SPA
+    "http://localhost:3000"
+    
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # ---------------------------- ENV ----------------------------
@@ -91,6 +117,15 @@ def login(form: OAuth2PasswordRequestForm = Depends()):
         "token_type": "bearer"
     }
 
+# ---------------------------- LOGIN SPA ----------------------------
+@app.post("/login-spa")
+def login(form: OAuth2PasswordRequestForm = Depends()):
+    if form.username != ADMIN_USERNAME or form.password != ADMIN_PASSWORD:
+        raise HTTPException(status_code=401, detail="Invalid credentials")
+
+    return {
+        "access_token": create_token({"sub": form.username}), "token_type": "bearer", "username": ADMIN_USERNAME
+    }
 # ================================================================
 # 🔧 FIXED FEATURE ENGINEERING (CRITICAL ALIGNMENT WITH TRAIN.PY)
 # ================================================================
