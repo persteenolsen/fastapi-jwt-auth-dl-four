@@ -6,21 +6,19 @@ Last updated
 
 A production-style machine learning backend system that predicts house prices using a PyTorch neural network trained on the Ames Housing dataset and served through a secure FastAPI API with JWT authentication
 
-# A Vue 3 frontend for the Web API
+This project demonstrates a full ML engineering pipeline: data preprocessing → feature engineering → model training → Tests → ONNX export → secure API inference
+
+# Vue 3 frontend for the Web API
 
 - [`The Vue 3 SPA at GitHub`](https://github.com/persteenolsen/vue-fastapi-jwt-auth-dl-four) - The Vue 3 SPA using JWT Authentication
 
-This project demonstrates a full ML engineering pipeline: data preprocessing → feature engineering → model training → Tests → ONNX export → secure API inference
+# 🧪 Tests
 
-For learning, debugging and ensuring quality, there are different kinds of tests involved
+This project includes four test scripts to validate model predictions and overall quality
 
 Note: For running a test inside the folder "tests" use the command:  
 
     python -m tests.testone
-
-# 🧪 Tests
-
-This project includes four test scripts to validate model predictions and overall quality.
 
 ### testone.py – Manual PyTorch vs ONNX Comparison
 Compares the PyTorch model predictions with the ONNX exported model on a set of hand-picked inputs.
