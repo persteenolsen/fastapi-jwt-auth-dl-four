@@ -16,8 +16,8 @@ from fastapi.middleware.cors import CORSMiddleware
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
 app = FastAPI(
-    title="FastAPI + JWT + Deep Learning + House Price Prediction + Tests (v8)",
-    description="06-05-2026 - FastAPI app with deep learning model serving house price predictions based on Ames Housing dataset using Tests.",
+    title="FastAPI + JWT + Deep Learning + House Price Prediction + Tests + Vue 3 SPA (v8)",
+    description="07-05-2026 - FastAPI app with deep learning model serving house price predictions based on Ames Housing dataset using Tests.",
     version="8.0.0",
     contact={
         "name": "Per Olsen",

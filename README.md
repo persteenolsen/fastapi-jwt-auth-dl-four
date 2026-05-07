@@ -1,14 +1,18 @@
-# 🏠 v8 - House Price Prediction API (FastAPI + PyTorch + JWT + Ames Dataset + Tests)
+# 🏠 v8 - House Price Prediction API (FastAPI + PyTorch + JWT + Ames Dataset + Tests + Vue 3 SPA)
 
 Last updated 
 
-- 06-05-2026
+- 07-05-2026
 
-A production-style machine learning backend system that predicts house prices using a PyTorch neural network trained on the Ames Housing dataset and served through a secure FastAPI API with JWT authentication.
+A production-style machine learning backend system that predicts house prices using a PyTorch neural network trained on the Ames Housing dataset and served through a secure FastAPI API with JWT authentication
 
-This project demonstrates a full ML engineering pipeline: data preprocessing → feature engineering → model training → Tests → ONNX export → secure API inference.
+# A Vue 3 frontend for the Web API
 
-For learning, debugging and ensuring quality, there are different kinds of tests involved.
+- [`The Vue 3 SPA at GitHub`](https://github.com/persteenolsen/vue-fastapi-jwt-auth-dl-four) - The Vue 3 SPA using JWT Authentication
+
+This project demonstrates a full ML engineering pipeline: data preprocessing → feature engineering → model training → Tests → ONNX export → secure API inference
+
+For learning, debugging and ensuring quality, there are different kinds of tests involved
 
 Note: For running a test inside the folder "tests" use the command:  
 
@@ -262,7 +266,7 @@ Response:
 - Train/inference consistency design  
 - Secure API authentication (JWT)  
 - ONNX-based model deployment  
-- Serverless-compatible ML inference design  
+- Serverless-compatible ML inference design 
 
 # 👨‍💻 Author
 
