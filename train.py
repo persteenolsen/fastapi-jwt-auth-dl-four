@@ -8,6 +8,14 @@ from sklearn.linear_model import LinearRegression
 from features import FEATURES
 import random
 
+#======================================================
+# Results of train.py and testfour with the parametres: 
+#======================================================
+
+# 10-05-2026
+# 17 % error average in testfour by 1 hidden layer, 4 neurons lr=0.006, weight_decay=1e-4, epochs=1000
+# 14 % error average in testfour by 1 hidden layer, 4 neurons lr=0.01, weight_decay=1e-4, epochs=800 
+# 13 % error average in testfour by 1 hidden layer, 4 neurons lr=0.03, weight_decay=1e-4, epochs=400
 # =====================================================
 # SET RANDOM SEED
 # =====================================================
@@ -91,7 +99,7 @@ class HouseModel(nn.Module):
 # =====================================================
 # TRAINER CLASS
 # =====================================================
-# 05-05-2026: Using lr=0.006 instead of lr=0.005 did the following:
+# 05-05-2026: Using lr=0.006 instead of lr=0.005 with epochs=1000 did the following:
 # testfour.py: Lowered the "Average percentage error" from: 24 % to 17 %
 # testone.py: The Manual predictions (PyTorch vs ONNX) are still as expected: 
 # When Gr_Liv_Area increase the Sales Price increase too !
