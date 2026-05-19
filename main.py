@@ -17,7 +17,7 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
 app = FastAPI(
     title="FastAPI + JWT + Deep Learning + House Price Prediction + Tests + Vue 3 SPA (v8)",
-    description="17-05-2026 - FastAPI app with deep learning model serving house price predictions based on Ames Housing dataset using Tests.",
+    description="19-05-2026 - FastAPI app with deep learning model serving house price predictions based on Ames Housing dataset using Tests.",
     version="8.0.0",
     contact={
         "name": "Per Olsen",
