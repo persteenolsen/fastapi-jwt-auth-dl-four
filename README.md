@@ -2,7 +2,7 @@
 
 Last updated 
 
-- 18-07-2026
+- 01-08-2026
 
 A production-style machine learning backend system that predicts house prices using a PyTorch neural network trained on the Ames Housing dataset and served through a secure FastAPI API with JWT authentication
 
